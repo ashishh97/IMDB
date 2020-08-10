@@ -66,7 +66,7 @@ def delete_movies(request):
                     Movie.objects.filter(name=data['name']).delete()
                     return Response(status=status.HTTP_200_OK,
                                     data={"message": "Movie deleted successfully",
-                                          "success": False})
+                                          "success": True})
 
             else:
                 return Response(status=status.HTTP_401_UNAUTHORIZED,
